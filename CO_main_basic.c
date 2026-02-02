@@ -1039,7 +1039,7 @@ rt_thread(void* arg) {
         /* 步骤3: 处理变量跟踪对象(用于数据记录) */
         /* Monitor variables with trace objects */
         CO_time_process(&CO_time);
-        for (i = 0; i < OD_traceEnable && i < co->CNT_TRACE; i++) {
+        for (uint32_t i = 0; i < OD_traceEnable && i < CO->CNT_TRACE; i++) {
             CO_trace_process(CO->trace[i], *CO_time.epochTimeOffsetMs);
         }
 #endif
