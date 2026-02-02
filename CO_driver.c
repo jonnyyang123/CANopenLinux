@@ -457,7 +457,7 @@ static
     /* set up error frame generation. What actually is available depends on your CAN kernel driver */
 #ifdef DEBUG
     err_mask = CAN_ERR_MASK; /* 调试模式下启用所有错误帧 */
-    // enable ALL error frames
+    /* enable ALL error frames */
 #else
     err_mask = CAN_ERR_ACK | CAN_ERR_CRTL | CAN_ERR_BUSOFF | CAN_ERR_BUSERROR; /* 启用关键错误帧 */
 #endif
